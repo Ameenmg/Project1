@@ -1,5 +1,5 @@
 name: CI/CD with terraform
- on:
+on:
    push:
     branches:
      - complete-ci/cd-with-terraform-aws
