@@ -42,7 +42,7 @@ on:
 
 
 
-      name: Terraform Apply
+    - name: Terraform Apply
       id: apply
       run: |-
        terraform apply PLAN
