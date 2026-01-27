@@ -6,8 +6,8 @@ terraform {
     }
   }
   backend "s3" {
-    key = "aws/ec2-deploy/terraform.tfstate"
-    
+    key    = "aws/ec2-deploy/terraform.tfstate"
+    region = "us-east-1"
   }
 }
 
