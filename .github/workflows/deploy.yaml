@@ -95,7 +95,10 @@ jobs:
           script: |-
             sudo apt update
             sudo apt install docker.io -y
-            sudo apt install awscli -y
+            sudo apt install python3-pip -y
+            pip install awscli
+            export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+            export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
             aws ecr get-login-password --region us-east-1 | sudo docker login --username AWS --password-stdin $REGISTRY
             sudo docker stop myappcontainer || true
             sudo docker rm myappcontainer || true
