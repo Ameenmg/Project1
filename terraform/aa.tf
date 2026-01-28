@@ -84,7 +84,7 @@ resource "aws_security_group" "maingroup" {
 }
 
 
-output "instance_puplic_ip" {
+output "instance_public_ip" {
     value = aws_instance.server.public_ip
     sensitive = true
 }
