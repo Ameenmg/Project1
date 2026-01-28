@@ -56,7 +56,7 @@ jobs:
     - name: Set outputs
       id: set-ip
       run: |
-       echo "::set-output name=instance_public_ip::$(terraform output -raw instance_public_ip)"
+       echo "instance_public_ip=$(terraform output -raw instance_public_ip)" >> $GITHUB_OUTPUT
       working-directory: ./terraform
 
   deploy:
